@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+      background:#001133;
+    
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    /* background: green; */
+}
+.time
+{
+    color: white;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px 40px;
+    background: #222020;
+    border-radius: 20px;
+    border: 10px solid #001133;
+    box-shadow:inset 5px 5px 20px  rgba(0,0,0,0.5),inset -1px -1px 10px rgba(0,0,0,0.5),1px 1px 5px rgba(0,0,0,0.5);
+    color: rgba(121, 218, 126, 0.671);
+    font-family: 'Carter One', cursive;
+    text-shadow: 1px 1px 10px rgba(8, 87, 15, 0.815),0px 0px 5px rgba(33, 128, 41, 0.671);
+
+}
+.anoclock
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.hand
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+    background:#f2f2f2 url('./clock.png') ;
+    background-size: cover;
+    border-radius: 50%;
+    border: 20px solid white;
+    transition: all 0.5s;
+    box-shadow:inset 5px 5px 20px rgba(0,0,0,0.2),
+    1px 1px 10px rgba(0,0,0,0.9);
+    /* background: white; */
+}
+/* .hand .hor_12
+{
+    transform: rotate(30deg);
+} */
+.hand::before
+{
+    content: '';
+    position: absolute;
+    top: 49%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    z-index: 10;
+    background: #666666;
+}
+.hand .number
+{
+    --rotation:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+.hand .num_1
+{
+    --rotation:30deg;
+}
+.hand .num_2
+{
+    --rotation:60deg;
+}
+.hand .num_3
+{
+    --rotation:90deg;
+}
+.hand .num_4
+{
+    --rotation:120deg;
+}
+.hand .num_5
+{
+    --rotation:150deg;
+}
+.hand .num_6
+{
+    --rotation:180deg;
+}
+.hand .num_7
+{
+    --rotation:210deg;
+}
+.hand .num_8
+{
+    --rotation:240deg;
+}
+.hand .num_9
+{
+    --rotation:270deg;
+}
+.hand .num_10
+{
+    --rotation:300deg;
+}
+.hand .num_11
+{
+    --rotation:330deg;
+}
+.hand .num_12
+{
+    --rotation:360deg;
+}
+
+.hand .hour
+{
+    width: 28%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #333333;
+    margin-top: 00px;
+    transform-origin:0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.hand .minute
+{
+    width: 25%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #a6a6a6;
+    margin-top: 0px;
+    transform-origin: 0;
+    position: absolute;
+    left: 50%;
+    z-index:1;
+    top: 50%;
+}
+.hand .sec
+{
+    width: 20%;
+    height: 4px;
+    background-color: #4d4d00;
+    border-radius: 20px;
+    margin-top: 0px;
+    transform-origin: 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+}
